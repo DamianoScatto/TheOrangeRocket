@@ -1,0 +1,37 @@
+#player {
+    width: inherit;
+    height: 100%;
+
+    margin: auto;
+}
+
+#player #title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#title * {
+    display: inline-block;
+}
+
+#title h2 {
+    width: 150%;
+    font-size: clamp(16px, 2vh, 1000px);
+}
+
+#title hr {
+    width: 100%
+}
+
+#video {
+    width: inherit;
+    height: auto;
+}
+
+#video div {
+    padding: 63% 0 0 0; 
+    position:relative;
+}
+
+/*Cose varie del video sulla home HTML*/

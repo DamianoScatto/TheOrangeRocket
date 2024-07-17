@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Home</title>
+      <link rel="icon" type="image/x-icon" href="/Sito Band/Foto/LogoBand.png">
+
+      <!-- Da includere sempre -->
+      <link rel="stylesheet" href="/Sito Band/Css/Default.css">
+      <link rel="stylesheet" href="/Sito Band/Css/NavBar.css">
+      <link rel="stylesheet" href="/Sito Band/Css/Footer.css">
+
+      <!-- Specifici di ogni pagina -->
+      <link rel="stylesheet" href="/Sito Band/Css/Slider.css">
+      <link rel="stylesheet" href="/Sito Band/Css/NextEvents.css">
+      <link rel="stylesheet" href="/Sito Band/Css/Player.css">
+
+      <!--Per aggiungere icone -->
+      <script src="https://kit.fontawesome.com/c0f124542d.js" crossorigin="anonymous"></script>
+   </head>
+
+   <body>
+      <header> <!-- DA AGGIUNGERE LE REFERENCE !!!! -->
+         <a href="/Sito Band/Home.html" id="navLogo"><img src="/Sito Band/Foto/LogoBand.png" alt="Logo"></a>
+
+         <h2>The Orange Rocket</h2>
+
+         <nav id="navBar">
+             <ul>
+                 <li id="home"><a href="Home.html" >Home</a></li>
+                 <li><a href="ProssimiEventi.html">Prossimi Eventi</a></li>
+                 <li><a href="ChiSiamo.html" id="lastColumn">Chi Siamo</a><!--Manca un /li, ma se funziona non toccare e nel chill-->
+                 <ul id="dropdownMenu">
+                     <li><a href="IMembri.html">I Membri</a></li>
+                     <li><a href="Contatti.html">Contatti</a></li>
+                 </ul>
+             </ul>
+         </nav>
+
+         <!-- Barra per dispositivi mobile -->
+         <nav id="smallNavBar">
+             <input type="checkbox" id="check">
+             <label for="check" class="checkBtn">
+                 <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+             </label>
+             <ul>
+                 <li><a href="Home.html" >Home</a></li>
+                 <li><a href="ProssimiEventi.html">Prossimi Eventi</a></li>
+                 <li><a href="ChiSiamo.html" id="lastColumn">Chi Siamo</a></li>
+                 <li><a href="IMembri.html">I Membri</a></li>
+                 <li><a href="Contatti.html">Contatti</a></li>
+             </ul>
+         </nav>
+      </header> 
+
+      <br>
+         
+      <main>
+         <hr>
+         <section id="slider">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+
+            <div id="overflow">
+               <div id="images">
+                  <div><img src="Foto/5.jpg" alt=""></div>
+                  <div><img src="Foto/13.jpg" alt=""></div>
+                  <div><img src="Foto/14.jpg" alt=""></div>
+                  <div><img src="Foto/18.jpg" alt=""></div>
+               </div>
+
+               <div id="arrows">
+                    <div class="oneSlideArrows">
+                        <div class="left arrow">
+                            <label for="s4" class="arrowLabel">
+                                <img src="/Sito Band/icon/left-arrow.png" alt="">
+                            </label>
+                        </div>
+                        <div class="right arrow">
+                            <label for="s2" class="arrowLabel">
+                                <img src="/Sito Band/icon/right-arrow.png" alt="">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="oneSlideArrows">
+                        <div class="left arrow">
+                            <label for="s1" class="arrowLabel">
+                                <img src="/Sito Band/icon/left-arrow.png" alt=""> 
+                            </label>
+                        </div>
+                        <div class="right arrow">
+                            <label for="s3" class="arrowLabel">
+                                <img src="/Sito Band/icon/right-arrow.png" alt=""> 
+                            </label>
+                        </div>
+                     </div>
+
+                     <div class="oneSlideArrows">
+                        <div class="left arrow">
+                            <label for="s2" class="arrowLabel">
+                                <img src="/Sito Band/icon/left-arrow.png" alt=""> 
+                            </label>
+                        </div>
+                        <div class="right arrow">
+                            <label for="s4" class="arrowLabel">
+                                <img src="/Sito Band/icon/right-arrow.png" alt=""> 
+                            </label>
+                        </div>
+                     </div>
+
+                     <div class="oneSlideArrows">
+                        <div class="left arrow">
+                              <label for="s3" class="arrowLabel">
+                                 <img src="/Sito Band/icon/left-arrow.png" alt=""> 
+                              </label>
+                        </div>
+                        <div class="right arrow">
+                              <label for="s1" class="arrowLabel">
+                                 <img src="/Sito Band/icon/right-arrow.png" alt=""> 
+                              </label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="bullets">
+                     <div id="aux">
+                        <label for="s1"></label>
+                        <label for="s2"></label>
+                        <label for="s3"></label>
+                        <label for="s4"></label>
+                     </div>
+                  </div>
+            </div>              
+         </section>  
+         <hr>
+   
+         <br><br><br>
+   
+         <section id="nextEvents"> <!--La foto è messa come sfondo della sezione su "NextEvents.css"-->
+            <div id="txtContainer">
+               <h2>Vieni a trovarci live!</h2>
+
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+
+               <br>
+   
+               <a href="ProssimiEventi.html">
+                  <p style="text-align: right;"><b>Scopri altre date!</b></p>
+                  <img src="/Sito Band/icon/right-arrow-white.png" alt="">
+               </a>
+            </div>
+   
+               <!-- <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Roundicons - Flaticon</a>
+   
+               <a href="https://www.flaticon.com/free-icons/username" title="username icons">Username icons created by Bharat Icons - Flaticon</a>
+               
+               <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Kiranshastry - Flaticon</a>
+   
+               <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Prosymbols - Flaticon</a>
+               -->
+         </section>   
+
+         <section id="smallNextEvents">
+            <div id="imageContainer">
+               <div></div>
+               <img src="/Sito Band/Foto/19.jpg" alt="">
+            </div>
+               
+            <div id="txtContainer">
+               <h2>Vieni a trovarci live!</h2>
+
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+               <div class="prossimaData">
+                  <p class="data"><mark>06/08/2024</mark></p>
+                  <p class="luogo">Santa Maria Della Neve</p>
+                  <p class="info">Sagra ad ingresso gratuito</p>
+               </div>
+
+               <br>
+   
+               <a href="ProssimiEventi.html">
+                        <p style="text-align: right;"><b>Scopri altre date!</b></p>
+                        <img src="/Sito Band/icon/right-arrow-white.png" alt="">
+               </a>
+            </div>
+         </section>
+
+         <br><br><br>
+            
+         <div id="player">
+            <div id="title">
+               <hr>
+               <h2>Video presentazione del gruppo</h2>
+               <hr>
+            </div>
+   
+            <div id="video">
+               <div>
+                  <iframe src="https://player.vimeo.com/video/964388879?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Prova1"></iframe>
+                  <script src="https://player.vimeo.com/api/player.js"></script>
+               </div>
+            </div>  
+         </div>
+   
+         <br><br><br>
+      </main>
+         
+         <!-- <footer>
+            <div>
+               <p>The Orange Rocket</p>  
+            </div>
+         </footer> -->
+   </body>
+</html>

@@ -1,0 +1,190 @@
+#slider {
+    width: inherit;
+    height: 65vh; /*DA SISTEMARE UNA VOLTA INSERITE LE IMMAGINI DEFININTIVE*/
+
+    /* background-color: white; */
+}
+
+input[type=radio] {
+    display: none;
+}
+
+#slider #overflow {
+    width: inherit;
+    height: 65vh; /*DA SISTEMARE UNA VOLTA INSERITE LE IMMAGINI DEFININTIVE*/
+
+    position: absolute;
+
+    overflow: hidden;
+
+    /* background-color: antiquewhite; */
+}
+
+/* IMAGES */
+
+#slider #overflow #images {
+    width: calc(65vw * 4);
+    height: auto;
+
+    transition: ease 1s;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#slider #overflow #images div {
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#slider #overflow #images div img {
+    width: auto;
+    height: 65vh; /*DA SISTEMARE UNA VOLTA INSERITE LE IMMAGINI DEFININTIVE*/
+
+    float: left;
+}
+
+@media (max-width: 808px) {
+    #slider #overflow #images {
+        width: calc(90vw * 4);
+    }
+
+    #slider #overflow #images div {
+        width: 90vw;
+    }
+}
+
+#s1:checked ~ #overflow #images {
+    margin-left: 0;
+}
+#s2:checked ~ #overflow #images {
+    margin-left: -100%;
+}
+#s3:checked ~ #overflow #images {
+    margin-left: -200%;
+}
+#s4:checked ~ #overflow #images {
+    margin-left: -300%;
+}
+
+/* ARROWS */
+
+#arrows {
+    width: inherit;
+    height: 65vh; /*DA SISTEMARE UNA VOLTA INSERITE LE IMMAGINI DEFININTIVE*/
+
+    
+}
+
+#arrows .oneSlideArrows {
+    width: inherit;
+    height: 100%;
+
+    position: relative;
+    top: -100%;
+
+    display: none;
+
+    z-index: 1;
+}
+
+#s1:checked ~ #overflow #arrows .oneSlideArrows:nth-child(1),
+#s2:checked ~ #overflow #arrows .oneSlideArrows:nth-child(2),
+#s3:checked ~ #overflow #arrows .oneSlideArrows:nth-child(3),
+#s4:checked ~ #overflow #arrows .oneSlideArrows:nth-child(4) {
+    display: block;
+}
+
+#arrows .oneSlideArrows .arrow {
+    width: clamp(32px, 5vw, 1000px);
+    height: inherit;
+
+    padding: 0 3vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrows .oneSlideArrows .left {
+    float: left;
+}
+#arrows .oneSlideArrows .right  {
+    float: right;
+}
+
+#arrows .oneSlideArrows .arrow .arrowLabel {
+    width: clamp(19px, 3vw, 1000px);
+    height: clamp(19px, 3vw, 1000px);
+    padding: clamp(2.5px, .4vw, 1000px);
+
+    background-color: white;
+    opacity: .5;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    position: absolute;
+}
+
+#arrows .oneSlideArrows .arrow .arrowLabel img {
+    width: 100%;
+    height: 100%;
+}
+
+/* BULLETS */
+
+#bullets {
+    width: inherit;
+    height: 4vh;
+    margin-top: -4vh;
+
+    position: absolute;
+
+    z-index: 2;
+}
+
+#bullets #aux {
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bullets #aux label {
+  width: clamp(7px, 1vw, 1000px);
+  height: clamp(7px, 1vw, 1000px);
+  border-radius: 100%;
+
+  margin: 0 1.25vw;
+
+  display: inline-block;
+
+  background: white;
+  opacity: 0.7;
+
+  border: solid 0.2vw grey;
+
+  cursor: pointer;
+
+  transition: all ease-in 0.35s;
+}
+
+#bullets #aux label:hover {
+  opacity: 1;
+}
+
+#s1:checked ~ #overflow #bullets label:nth-child(1),
+#s2:checked ~ #overflow #bullets label:nth-child(2),
+#s3:checked ~ #overflow #bullets label:nth-child(3),
+#s4:checked ~ #overflow #bullets label:nth-child(4) {
+  width: clamp(6px, .9vw, 1000px);
+  height: clamp(6px, .9vw, 1000px);
+  border: none;
+  opacity: 1;
+}

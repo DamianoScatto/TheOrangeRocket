@@ -1,0 +1,168 @@
+/*NAVIGATION BAR*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header { 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+} /*Se vuoi che sia sticky la navigation bar*/
+
+#navLogo {
+    height: 10vw;
+    min-height: 75px;
+}
+
+#navLogo img {
+    height: 100%;
+    width: auto;
+}
+
+header h2 {
+    padding-right: 2%;
+
+    font-size: clamp(16px, 2.8vw, 45px);
+    font-weight: bold;
+    text-align: center;
+}
+
+header a {
+    font-size: clamp(10px, 1vw, 16px);
+}
+
+#navBar ul {
+    list-style: none;
+}
+
+#navBar ul li {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+#navBar ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    
+    display: block;
+    padding: 1vh 1vw;
+    
+    transition: all ease 0.3s;
+}
+
+#navBar ul li a:hover {
+    background-color: orange;
+}
+
+/*DROPDOWN MENU*/
+
+#navBar ul li #dropdownMenu {
+    width: 100%;
+
+    position: absolute;
+   
+    display: none;
+
+    z-index: 1;
+
+    transition: all ease 1s;
+}
+
+#navBar ul li:hover #dropdownMenu {
+    display: block;
+}
+
+#navBar #dropdownMenu li {
+    position: relative;
+    float: none;
+
+    display: block;
+    
+    background-color: #E4710E;
+}
+
+/*DECORAZIONI*/
+
+#navBar #home {
+    border: none;
+    background-color: #E4710E;
+}
+
+#home:hover {
+    background-color: orange;
+}
+
+#navBar li {
+    border-left: solid 1px white; 
+    /* Il bordo della casella home è tolto sopra, in modo che non faccia da "lato" quello del dropdown sotto */
+}
+
+#dropdownMenu li {
+    border: none;
+}
+
+/*BARRA DI NAVIGAZIONE MOBILE*/
+
+#smallNavBar {
+    display: none;
+
+    z-index: 1000;
+}
+
+#check {
+    display: none;
+}
+
+.checkBtn {
+    font-size: clamp(14px, 4vw, 22px);
+    padding: .9vw;
+
+    cursor: pointer;
+}
+
+#smallNavBar ul {
+    width: 100%;
+    height: 100vh;
+    padding-top: 7%;
+
+    position: fixed;
+    left: 100%;
+    top: clamp(calc(75px + 2vh), 10vw, 10000px);
+
+    text-align: center;
+    overflow: scroll;
+    
+    background-color: #e4720e;
+
+    transition: all ease .7s;
+}
+
+#smallNavBar #check:checked ~ ul {
+    left: 0;
+}
+
+#smallNavBar ul li {
+    padding: 15px;
+}
+
+#smallNavBar ul li a {
+    color: white;
+    font-size: clamp(12px, 2.3vw, 18px);
+    text-decoration: none;
+}
+
+@media (max-width: 808px) {
+    #navBar {
+        display: none;
+    }
+
+    #smallNavBar {
+        display: block;
+    }
+}

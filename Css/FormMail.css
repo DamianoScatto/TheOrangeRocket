@@ -1,0 +1,172 @@
+/*.formMail {
+    width: 853px;
+    height: 500px;
+    margin: auto;
+
+    background-color: blue;
+}
+
+.formMail div {
+    width: 40%; Deve essere modificata anche riga 20
+    height: 100%;
+    padding: 20px 15px;
+
+    display: inline-block;
+
+    background-color: chartreuse;
+}
+
+.formMail form {
+    width: 60%;
+    height: 100%;
+    padding: 0 20px;
+
+    float: right;
+    
+    background-color: brown;
+}
+
+.formMail form input {
+    width: 90%;
+    height: 35px;
+    margin: 15px 0 0 10%; Deve valere 100% - width
+    padding: 10px;
+    display: block;
+    
+    border-radius: 7px;
+    border: none;
+    color: white;
+
+    background-color: #E4710E;
+    background-position: 10px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0 0 0 40px;
+}
+
+.formMail form input:focus {
+    outline: none;
+}
+
+.formMail form input::placeholder { 
+    color: white;
+}
+
+.formMail form input[type=submit] {
+    width: 20%;
+    height: auto;
+    padding: 7px;
+
+    text-align: center;
+
+    float: right;
+}
+
+#text {
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+#name {
+    background-image: url('../icon/name.png');
+}
+#email{
+    background-image: url('../icon/email.png');
+}
+#telefono {
+    background-image: url('../icon/phone.png');
+}
+#text{
+    background-image: url('../icon/txt.png');
+}*/
+
+.formMail {
+    width: 853px;
+    height: auto;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.formMail .left {
+    width: 45%;
+}
+
+.formMail form {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formMail input, .formMail textarea, .formMail button {
+    margin: 10px 0;
+
+    color: white;
+    border: none;
+    border-radius: 7px;
+    
+    background-color: #E4710E;
+
+    background-position: 10px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.formMail input {
+    height: 35px;
+    padding: 10px 10px 10px 40px;
+}
+
+.formMail textarea {
+    height: 100px;
+    padding: 10px 10px 10px 40px;
+
+    resize: none;
+}
+
+.formMail input:focus, .formMail textarea:focus {
+    background-color: #cb5800;
+    outline: none;
+}
+
+.formMail input::placeholder, .formMail textarea::placeholder {
+    font-family:'Times New Roman', Times, serif;
+    color: #e9e9e9;
+}
+
+.formMail button {
+    height: 27px;
+    width: 20%;
+
+    margin-left: 79%;
+
+    cursor: pointer;
+}
+
+.formMail button:hover {
+    background-color: #ff9539;
+}
+
+
+#name {
+    background-image: url('../icon/name.png');
+}
+#email{
+    background-image: url('../icon/email.png');
+}
+#telefono {
+    background-image: url('../icon/phone.png');
+}
+#txt{
+    background-image: url('../icon/txt.png');
+}
+

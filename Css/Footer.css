@@ -1,0 +1,15 @@
+footer {
+    width: 100%;
+    height: 50px;
+
+    background-color: #E4710E;
+}
+
+footer div {
+    width: 853px;
+    height: 100%;
+    margin: auto;
+
+    align-items: center;
+    display: flex;
+}

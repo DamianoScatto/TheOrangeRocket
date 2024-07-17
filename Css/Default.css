@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-height: 100vh;
+}
+
+header, main {
+    width: 65vw;
+    padding-top: 2vh;
+}
+
+@media (max-width: 808px) {
+    header, main {
+        width: 90vw;
+    }
+}
+
+hr {
+    border: 3px solid #E4710E;  
+    margin: auto;
+}
+
+mark {
+    background-color: #E4710E;
+    color: white;
+}
+
+br, .video, img, nav, form{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+main {
+    flex-grow: 1;
+}
